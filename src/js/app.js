@@ -6,12 +6,11 @@ export class HealthHero {
         this.status = 'healthy';
     }
     healthStatusCheck() {
-        if (this.health < 50 && this.health >= 15) {
-            this.status = 'wounded';
-        };
         if (this.health < 15) {
             this.status = 'critical';
-        };
+        } else if (this.health < 50) {
+            this.status = 'wounded';
+        }
         return this.status;
     }
 } 
